@@ -1,0 +1,32 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./assets/script/app.js":
+/*!******************************!*\
+  !*** ./assets/script/app.js ***!
+  \******************************/
+/***/ (() => {
+
+eval("document.addEventListener(\"DOMContentLoaded\", () => {\r\n  const sectionBooks = document.querySelector(\"#show-books\");\r\n\r\n  const navbar = document.querySelector(\".nav-list\");\r\n  const toggleBtn = document.querySelector(\".menu-toggle\");\r\n  const closeBtn = document.querySelector(\".menu-close\");\r\n\r\n  function toggleMenu(show) {\r\n    navbar.classList.toggle(\"hidden\", !show);\r\n    closeBtn.classList.toggle(\"hidden\", !show);\r\n    toggleBtn.classList.toggle(\"hidden\", show);\r\n  }\r\n\r\n  toggleBtn.addEventListener(\"click\", () => toggleMenu(true));\r\n  closeBtn.addEventListener(\"click\", () => toggleMenu(false));\r\n\r\n  const button = document.querySelector(\".search-button\");\r\n\r\n  button.addEventListener(\"click\", () => {\r\n    search();\r\n  });\r\n\r\n  async function search() {\r\n    const input = document.querySelector(\"#category\");\r\n    const category = input.value.trim().toLowerCase();\r\n\r\n    if (!category) {\r\n      alert(\"Inserisci una categoria prima di cercare.\");\r\n      return;\r\n    }\r\n\r\n    const url = `https://openlibrary.org/subjects/${category}.json`;\r\n\r\n    try {\r\n      const response = await axios.get(url);\r\n      const json = response.data;\r\n\r\n      // Controllo che l'array dei libri esista e abbia elementi con Lodash\r\n      if (!_.get(json, \"works.length\", 0)) {\r\n        alert(\"Nessun libro trovato per questa categoria.\");\r\n        sectionBooks.style.display = \"none\";\r\n        return;\r\n      }\r\n\r\n      // Mostro il contenitore solo dopo aver verificato che ci siano libri\r\n      sectionBooks.style.display = \"flex\";\r\n      sectionBooks.style.flexDirection = \"column\";\r\n      sectionBooks.style.alignItems = \"center\";\r\n      sectionBooks.style.justifyContent = \"center\";\r\n      sectionBooks.innerHTML = \"\";\r\n\r\n      json.works.forEach((book) => {\r\n        const bookCard = document.createElement(\"div\");\r\n        bookCard.classList.add(\"book-card\");\r\n\r\n        const titleElement = document.createElement(\"p\");\r\n        titleElement.classList.add(\"book-title\");\r\n        titleElement.textContent = book.title;\r\n\r\n        const authorDiv = document.createElement(\"div\");\r\n        authorDiv.classList.add(\"book-authors\");\r\n\r\n        if (_.get(book, \"authors.length\", 0)) {\r\n          book.authors.forEach((author) => {\r\n            const authorElement = document.createElement(\"p\");\r\n            authorElement.textContent = `Autore: ${author.name}`;\r\n            authorElement.classList.add(\"author-name\");\r\n            authorDiv.appendChild(authorElement);\r\n          });\r\n        } else {\r\n          const authorElement = document.createElement(\"p\");\r\n          authorElement.textContent = \"Autore non disponibile\";\r\n          authorDiv.appendChild(authorElement);\r\n        }\r\n\r\n        const descriptionButton = document.createElement(\"button\");\r\n        descriptionButton.classList.add(\"description-btn\");\r\n        descriptionButton.textContent = \"Descrizione\";\r\n\r\n        const descriptionDiv = document.createElement(\"div\");\r\n        descriptionDiv.classList.add(\"book-description\");\r\n\r\n        const descriptionElement = document.createElement(\"p\");\r\n        descriptionDiv.appendChild(descriptionElement);\r\n\r\n        descriptionButton.addEventListener(\"click\", async () => {\r\n          if (descriptionDiv.style.display === \"block\") {\r\n            descriptionDiv.style.display = \"none\";\r\n            return;\r\n          }\r\n\r\n          try {\r\n            const secondUrl = `https://openlibrary.org${book.key}.json`;\r\n            const secondResponse = await axios.get(secondUrl);\r\n            const secondJson = secondResponse.data;\r\n\r\n            let descriptionText = \"Descrizione non disponibile\";\r\n\r\n            if (secondJson.description) {\r\n              if (typeof secondJson.description === \"string\") {\r\n                descriptionText = secondJson.description;\r\n              } else if (secondJson.description.value) {\r\n                descriptionText = secondJson.description.value;\r\n              }\r\n            }\r\n\r\n            descriptionElement.textContent = `Descrizione: ${descriptionText}`;\r\n            descriptionDiv.style.display = \"block\";\r\n          } catch (error) {\r\n            console.error(\"Errore nel recupero della descrizione:\", error);\r\n            descriptionElement.textContent = \"Errore durante il recupero della descrizione.\";\r\n            descriptionDiv.style.display = \"block\";\r\n          }\r\n        });\r\n\r\n        bookCard.appendChild(titleElement);\r\n        bookCard.appendChild(authorDiv);\r\n        bookCard.appendChild(descriptionButton);\r\n        bookCard.appendChild(descriptionDiv);\r\n        sectionBooks.appendChild(bookCard);\r\n      });\r\n    } catch (error) {\r\n      console.error(\"Errore durante il fetch dei libri:\", error);\r\n      alert(\"Si è verificato un errore nel recupero dei dati.\");\r\n      sectionBooks.style.display = \"none\";\r\n    }\r\n  }\r\n});\n\n//# sourceURL=webpack://nuova-cartella-3/./assets/script/app.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./assets/script/app.js"]();
+/******/ 	
+/******/ })()
+;
