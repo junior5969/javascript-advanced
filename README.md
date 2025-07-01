@@ -1,74 +1,95 @@
+# 🦉 Owly
 
-# Owly
+**Owly** è una piattaforma educativa interattiva progettata per supportare bambini, genitori e insegnanti nel percorso di apprendimento. La pagina web offre sezioni dedicate alla lettura, allo studio, alla LIS (Lingua dei Segni Italiana) e all’area personale.
 
-Owly è una piattaforma educativa interattiva che aiuta bambini, genitori e insegnanti nell'apprendimento. La pagina web offre diverse sezioni per esplorare contenuti didattici, giocare con giochi educativi e accedere a risorse multimediali.
+---
 
 ## ❓ Come funziona
 
-All'apertura, verrà visualizzata la homepage. La pagina è suddivisa in varie sezioni, ognuna con una funzionalità specifica:
+All'apertura verrà visualizzata la homepage, composta da diverse sezioni:
 
-- **Sezione di ricerca libri:** una casella di ricerca per inserire il nome di una categoria di libri da leggere.
-- **Sezione di studio:** una serie di card che offrono giochi educativi e approfondimenti.
-- **Sezione LIS:** contenuti multimediali dedicati alla Lingua dei Segni Italiana.
-- **Area personale:** dove gli utenti possono registrarsi e ricevere comunicazioni dalla scuola.
+- **Ricerca libri**: una barra dove inserire categorie per trovare libri consigliati.
+- **Sezione studio**: card con giochi educativi e materiali interattivi.
+- **Sezione LIS**: contenuti accessibili in Lingua dei Segni Italiana.
+- **Area personale**: spazio dedicato alla registrazione e alle comunicazioni scolastiche.
 
+---
 
 ## 📷 Anteprima
 
-**Sezione di ricerca libri**  
-![Sezione di ricerca libri](assets/img/sezione-libri.png)  
+**Ricerca libri**  
+![Sezione di ricerca libri](assets/img/sezione-libri.png)
 
-**Ricerca libri in esecuzione**  
-![Sezione di ricerca libri in esecuzione](assets/img/sezione-attiva.png)  
+**Esecuzione ricerca**  
+![Sezione attiva](assets/img/sezione-attiva.png)
 
-**Approfondimento di un libro**  
-![Approfondimento di un libro](assets/img/descrizione-libro.png)  
+**Dettaglio libro**  
+![Descrizione libro](assets/img/descrizione-libro.png)
 
+---
 
 ## 📌 Come utilizzare
 
-1. Scarica il progetto:
-Vai sulla pagina GitHub del progetto e clicca su Code > Download ZIP, oppure clona il repository con Git
+### ✅ Modalità utente (senza installazione)
 
-2. Estrai il contenuto del file ZIP scaricato e apri la cartella  **"website"**.
+1. **Scarica o clona il progetto**  
+   Vai su GitHub e clicca su `Code > Download ZIP`.
 
-3. Apri il file **"index.html"**:
-Fai doppio clic su  **"index.html"** per visualizzare la pagina nel tuo browser.
+2. Estrai la cartella scaricata.
 
+3. Apri la cartella `dist/`.
+
+4. Fai doppio clic su **`index.html`** per aprire la pagina nel browser.
+
+> ℹ️ La cartella `dist/` contiene già tutti i file compilati con Webpack, quindi non serve installare nulla.
+
+---
+
+### 💻 Modalità sviluppatore (modifica del codice)
+
+Se vuoi modificare il codice sorgente:
+
+1. Clona il repository o scaricalo.
+2. Apri il terminale nella directory principale.
+3. Esegui `npm install` per installare le dipendenze.
+4. Avvia il progetto in locale con `npm start`.
+5. Oppure esegui `npm run build` per rigenerare i file nella cartella `dist/`.
+
+---
 
 ## 🛠️ Tecnologie utilizzate
 
-- HTML5
-- CSS3
-- JavaScript
-- [Axios](https://axios-http.com/): per gestire le richieste HTTP.
-- [Lodash](https://lodash.com/): per semplificare operazioni su array e oggetti.
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6)**
+- [**Axios**](https://axios-http.com/) — per le richieste HTTP
+- [**Lodash**](https://lodash.com/) — per utility su array e oggetti
+- **Webpack** — per il bundling del progetto
 
 
 ## 🧩 Struttura del progetto 
 
 
 ```
-Progetto JavaScriptAdvanced di Chiara Barletta/
+Progetto JavaScript Advanced di Chiara Barletta/
 │
-├── website/
-│   ├── index.html
-│   ├── index.js
-│   ├── .gitignore
-│   ├── package.json
-│   ├── package-lock.json
-│   ├── webpack.config.js
-│   ├── README.md
-│   └── assets/
-│       ├── css/
-│       │   └── style.css
-│       ├── img/
-│       │   └── [immagini]
-│       └── js/
-│           └── app.js
-├── dist/
+├── dist/                      
+│   └── index.html
 │   └── bundle.js
-└── node_modules/
+│
+├── assets/                    
+│   ├── css/
+│   │   └── style.css
+│   ├── img/
+│   │   └── [immagini]
+│   └── js/
+│       └── app.js
+│
+├── index.html                 
+├── webpack.config.js          
+├── package.json               
+├── .gitignore                 
+└── README.md  
 ``` 
 
 ## 👩🏻‍💻 Autrice
@@ -78,12 +99,12 @@ Chiara Barletta
 
 ## 🌐 Demo Online
 
-[Prova il progetto qui](https://neon-semifreddo-85a15c.netlify.app/). 
+[Visualizza il progetto su Netlify](https://owly-website.netlify.app/). 
 
 
 ## 📂 Repository GitHub
 
-Visita il codice sorgente su [GitHub](https://github.com/junior5969/website).
+Visita il codice sorgente su [GitHub](https://github.com/junior5969/javascript-advanced).
 
 
 ## 📄 Documentazione 
