@@ -8,6 +8,7 @@ module.exports = {
   path: path.resolve(__dirname, 'dist'), // La cartella di output
   filename: 'bundle.js', // Forza il nome del file
   clean: true,  // Pulizia della cartella dist prima della build
+  publicPath: '/javascript-advanced/' 
   },
   mode: 'development', // Modalità di sviluppo
   module: {
