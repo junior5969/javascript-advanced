@@ -32,8 +32,8 @@ module.exports = {
       filename: 'style.css', // Estrae il CSS in un file separato
     }),
   ],
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist'), // Serve il contenuto dalla cartella dist
-    open: true, // Apre il browser automaticamente durante lo sviluppo
-  },
+devServer: {
+  static: path.join(__dirname, 'dist'),
+  port: 8080,
+},
 };
