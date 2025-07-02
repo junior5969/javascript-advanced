@@ -13,3 +13,5 @@ yarn-error.log*
 
 # Sistema operativo
 Thumbs.db
+# Local Netlify folder
+.netlify
