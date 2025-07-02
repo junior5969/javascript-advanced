@@ -1,3 +1,7 @@
+
+import axios from 'axios';
+import _ from 'lodash';
+
 document.addEventListener("DOMContentLoaded", () => {
   const sectionBooks = document.querySelector("#show-books");
 
