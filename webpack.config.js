@@ -24,7 +24,7 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg)$/i, // Riconosce i file immagine
+        test: /\.(jpg|jpeg|png|gif|svg|ico)$/i, // Riconosce i file immagine
         type: 'asset/resource', // Copia le immagini nella cartella dist
         generator: {
           filename: 'assets/img/[name][ext][query]', // Organizza le immagini nella cartella assets/img
