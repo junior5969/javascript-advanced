@@ -62,23 +62,24 @@ All'apertura verrà visualizzata la homepage, composta da diverse sezioni:
 ```
 Progetto JavaScript Advanced di Chiara Barletta/
 │
-├── dist/                      
-│   └── index.html
-│   └── bundle.js
+├── dist/                       
+│   └── index.html              
+│   └── bundle.js              
 │
 ├── assets/                    
 │   ├── css/
-│   │   └── style.css
+│   │   └── style.css         
 │   ├── img/
-│   │   └── [immagini]
-│   └── js/
-│       └── app.js
+│   │   └── [immagini]        
+│   └── script/
+│       └── app.js            
 │
 ├── index.html                 
 ├── webpack.config.js          
 ├── package.json               
 ├── .gitignore                 
-└── README.md  
+├── README.md                  
+└── Presentazione.pdf           
 ``` 
 
 ## 👩🏻‍💻 Autrice
@@ -88,7 +89,7 @@ Chiara Barletta
 
 ## 🌐 Demo Online
 
-[Visualizza il progetto su Netlify](https://owly-website.netlify.app/). 
+Visualizza il progetto su [Netlify](https://owly-website.netlify.app/). 
 
 
 ## 📂 Repository GitHub
