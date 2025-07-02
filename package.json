@@ -4,10 +4,12 @@
   "description": "Piattaforma educativa interattiva",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "start": "webpack serve",
-    "build": "cross-env NODE_ENV=production webpack"
+    "start": "webpack serve --mode development",
+    "build": "cross-env NODE_ENV=production DEPLOY_ENV=LOCAL webpack --mode production",
+    "predeploy": "npm run build", 
+    "deploy": "cross-env DEPLOY_ENV=GH_PAGES gh-pages -d dist", 
+    "deploy-netlify": "cross-env DEPLOY_ENV=NETLIFY netlify deploy --dir=dist --prod", 
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -25,5 +27,6 @@
     "axios": "^1.10.0",
     "lodash": "^4.17.21"
   },
-  "homepage": "https://junior5969.github.io/javascript-advanced"
+  "homepage": "https://junior5969.github.io/javascript-advanced", 
+  "browserslist": "> 0.2%, last 2 versions, not dead"
 }
