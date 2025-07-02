@@ -1,8 +1,11 @@
 
 import axios from 'axios';
 import _ from 'lodash';
+<<<<<<< HEAD
 import '../css/style.css';  // Assicurati che il percorso sia corretto
 
+=======
+>>>>>>> 925d025 (Aggiornato axios per risolvere vulnerabilità di sicurezza)
 
 document.addEventListener("DOMContentLoaded", () => {
   const sectionBooks = document.querySelector("#show-books");
