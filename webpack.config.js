@@ -7,9 +7,9 @@ const isGitHubPages = process.env.DEPLOY_ENV === 'GH_PAGES'; // Variabile di amb
 module.exports = {
   entry: './assets/script/app.js', // Il punto di ingresso del tuo JS
   output: {
-    filename: 'bundle.js', // Il nome del file bundle che verrà generato
-    path: path.resolve(__dirname, 'dist'), // La cartella di output
-    publicPath: isGitHubPages ? '/javascript-advanced/' : '/', // Se su GitHub Pages, usa un percorso relativo
+    path: path.resolve(__dirname, 'dist'), // Cartella di destinazione
+    filename: '[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -25,7 +25,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './assets/index.html', // Usa il file index.html come template
+      template: './index.html', // Usa il file index.html come template
       filename: 'index.html', // Salva il file HTML nella cartella dist
     }),
     new MiniCssExtractPlugin({
