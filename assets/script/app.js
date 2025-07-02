@@ -1,6 +1,8 @@
 
 import axios from 'axios';
 import _ from 'lodash';
+import '../css/style.css';  // Assicurati che il percorso sia corretto
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const sectionBooks = document.querySelector("#show-books");

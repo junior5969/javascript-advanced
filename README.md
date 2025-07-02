@@ -1,4 +1,4 @@
-# 🦉 Owly
+# Owly
 
 **Owly** è una piattaforma educativa interattiva progettata per supportare bambini, genitori e insegnanti nel percorso di apprendimento. La pagina web offre sezioni dedicate alla lettura, allo studio, alla LIS (Lingua dei Segni Italiana) e all’area personale.
 
@@ -41,19 +41,8 @@ All'apertura verrà visualizzata la homepage, composta da diverse sezioni:
 
 4. Fai doppio clic su **`index.html`** per aprire la pagina nel browser.
 
-> ℹ️ La cartella `dist/` contiene già tutti i file compilati con Webpack, quindi non serve installare nulla.
+> La cartella `dist/` contiene già tutti i file compilati con Webpack.
 
----
-
-### 💻 Modalità sviluppatore (modifica del codice)
-
-Se vuoi modificare il codice sorgente:
-
-1. Clona il repository o scaricalo.
-2. Apri il terminale nella directory principale.
-3. Esegui `npm install` per installare le dipendenze.
-4. Avvia il progetto in locale con `npm start`.
-5. Oppure esegui `npm run build` per rigenerare i file nella cartella `dist/`.
 
 ---
 
