@@ -93,9 +93,9 @@ Chiara Barletta
 
 ## 📂 Repository GitHub
 
-Visita il codice sorgente su [GitHub](https://github.com/junior5969/javascript-advanced).
+Visita il codice sorgente su [GitHub](https://junior5969.github.io/javascript-advanced/).
 
 
 ## 📄 Documentazione 
 
-[Presentazione del progetto (PDF)](./Presentazione.pdf) 
+[Presentazione del progetto (PDF)](./Presentazione.pdf)
