@@ -63,23 +63,27 @@ All'apertura verrà visualizzata la homepage, composta da diverse sezioni:
 Progetto JavaScript Advanced di Chiara Barletta/
 │
 ├── dist/                       
-│   └── index.html              
-│   └── bundle.js              
+│   ├── index.html              
+│   ├── main.js                 
+│   ├── style.css               
+│   └── assets/                 
+│       └── img/                
+│           └── [immagini]      
 │
 ├── assets/                    
-│   ├── css/
-│   │   └── style.css         
-│   ├── img/
-│   │   └── [immagini]        
-│   └── script/
-│       └── app.js            
+│   ├── css/                     
+│   │   └── style.css           
+│   ├── img/                     
+│   │   └── [immagini]          
+│   └── script/                  
+│       └── app.js              
 │
-├── index.html                 
-├── webpack.config.js          
-├── package.json               
-├── .gitignore                 
-├── README.md                  
-└── Presentazione.pdf           
+├── index.html                  
+├── webpack.config.js           
+├── package.json                
+├── .gitignore                  
+├── README.md                   
+└── Presentazione.pdf            
 ``` 
 
 ## 👩🏻‍💻 Autrice
