@@ -9,7 +9,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), // Cartella di destinazione
     filename: '[name].js',
-    publicPath: '/',
+    // Cambia publicPath dinamicamente
+    publicPath: isGitHubPages ? '/javascript-advanced/' : '/', // Se su GitHub Pages, aggiungi il nome del repo
   },
   module: {
     rules: [
@@ -32,8 +33,8 @@ module.exports = {
       filename: 'style.css', // Estrae il CSS in un file separato
     }),
   ],
-devServer: {
-  static: path.join(__dirname, 'dist'),
-  port: 8080,
-},
+  devServer: {
+    static: path.join(__dirname, 'dist'),
+    port: 8080,
+  },
 };
