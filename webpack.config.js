@@ -2,44 +2,48 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
-const isGitHubPages = process.env.DEPLOY_ENV === 'GH_PAGES'; // Variabile di ambiente per GitHub Pages
+const isGitHubPages = process.env.DEPLOY_ENV === 'GH_PAGES';
 
 module.exports = {
-  entry: './assets/script/app.js', // Il punto di ingresso del tuo JS
+  entry: './assets/script/app.js', 
   output: {
-    path: path.resolve(__dirname, 'dist'), // Cartella di destinazione
+    path: path.resolve(__dirname, 'dist'), 
     filename: '[name].js',
-    // Cambia publicPath dinamicamente
-    publicPath: isGitHubPages ? '/javascript-advanced/' : '', // Se su GitHub Pages, aggiungi il nome del repo
+    publicPath: isGitHubPages ? '/javascript-advanced/' : '', 
   },
   module: {
     rules: [
       {
-        test: /\.css$/i, // Riconosce i file CSS
-        use: [MiniCssExtractPlugin.loader, 'css-loader'], // Usa MiniCssExtractPlugin per estrarre il CSS
+        test: /\.css$/i, 
+        use: [MiniCssExtractPlugin.loader, 'css-loader'], 
       },
       {
-        test: /\.html$/i, // Riconosce i file HTML
+        test: /\.html$/i, 
         loader: 'html-loader',
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg|ico)$/i, // Riconosce i file immagine
-        type: 'asset/resource', // Copia le immagini nella cartella dist
+        test: /\.(jpg|jpeg|png|gif|svg|ico)$/i, 
+        type: 'asset/resource', 
         generator: {
-          filename: 'assets/img/[name][ext][query]', // Organizza le immagini nella cartella assets/img
+          filename: 'assets/img/[name][ext][query]', 
         },
       },
     ],
   },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   plugins: [
-    new CleanWebpackPlugin(), // Pulizia della cartella dist prima di ogni build
+    new CleanWebpackPlugin(), 
     new HtmlWebpackPlugin({
-      template: './index.html', // Usa il file index.html come template
-      filename: 'index.html', // Salva il file HTML nella cartella dist
+      template: './index.html', 
+      filename: 'index.html', 
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css', // Estrae il CSS in un file separato
+      filename: 'style.css', 
     }),
   ],
   devServer: {
