@@ -162,7 +162,7 @@ header {
 /*INTRO*/
 
 #intro {
-    background-image: url(/assets/img/page.jpg);
+    background-image: url(assets/img/page.jpg);
     background-position: center;
     background-size: cover;
     margin: 0 0 20vh 0;
