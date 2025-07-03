@@ -1,1 +1,179 @@
-<!doctype html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Owly: piattaforma educativa interattiva per bambini, genitori e insegnanti. Scopri libri, quiz, giochi e comunicazioni scolastiche."><meta name="keywords" content="Owly, scuola, apprendimento, libri, esercizi, video, quiz, bambini, insegnanti, genitori"><meta name="author" content="Chiara"><meta property="og:title" content="Owly"><meta property="og:description" content="Owly ti aiuta a rendere lo studio più semplice e divertente con libri, giochi ed esercizi interattivi."><meta property="og:image" content="https://junior5969.github.io/javascript-advanced/assets/img/logo.png"><meta property="og:url" content="https://junior5969.github.io/javascript-advanced"><meta property="og:type" content="website"><link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"><link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"><title>Owly</title><script defer="defer" src="main.js"></script><link href="style.css" rel="stylesheet"></head><body><header class="navbar"><img src="assets/img/logo-removebg.png" alt="Immagine logo Owly raffigurante un libro aperto e le lettere che formano OWLY in colori diversi"> <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button><nav class="nav-list hidden"><button class="menu-close hidden" aria-label="Chiudi il menu">&#x58;</button> <a href="#about-us">Chi siamo</a> <a href="#game">Studiare</a> <a href="#message">Comunicazioni</a></nav></header><main><div id="intro"><div class="intro-container"><div class="intro-img"><img src="assets/img/ragazzi-a-scuola.png" alt="Immagine raffigurante tre bambini a scuola con zaino e quaderni colorati"></div><div class="intro-elements"><h1 id="intro-title">Imparare non è stato mai così divertente!</h1><button type="button" class="btn first-button" aria-labelledby="intro-title">Accedi</button></div></div></div><div id="card"><div class="card-container"><div class="card-list"><div><i class="bi bi-book"></i><p>Approfondisci le tue conoscenze cercando il libro che fa al caso tuo</p></div><div><i class="bi bi-joystick"></i><p>Allenati con quiz interattivi per consolidare lo studio</p></div><div><i class="bi bi-pencil"></i><p>Consulta appunti e testi relativi alle lezioni seguite in classe</p></div><div><i class="bi bi-envelope"></i><p>Ricevi comunicazioni dalla tua scuola per rimanere sempre aggiornato</p></div></div></div></div><section id="about-us"><h2>Insieme per crescere, insieme per capire</h2><div class="about-description"><div class="about-img-container"><img src="assets/img/about-img.jpg" alt="Immagine raffigurante una classe di bambini che alzano la mano"></div><div class="about-description-text"><p>Chi è <span>Owly</span>? Un gruppo di insegnanti con un obiettivo comune:<br>rendere lo studio più semplice, accessibile e stimolante per tutti.<br>Così abbiamo creato uno spazio colorato ed intuitivo,<br>per accompagnare in un percorso quotidiano:</p><ul class="about-us-list"><li>bambini</li><li>genitori</li><li>insegnanti</li></ul></div></div></section><section id="search"><h2>Scegli la categoria di libro che vuoi leggere!</h2><div class="search-container"><div class="search-elements"><label for="category" class="sr-only">Inserisci la categoria di libri da cercare</label> <input class="textbox" id="category" placeholder="Categoria" required> <button type="button" class="btn btn--lightblue search-button" aria-label="Cerca una categoria di libro che vuoi leggere">Cerca</button></div></div></section><div id="show-books"></div><section id="game"><h2>Divertiti e impara</h2><div class="game-card"><div class="text-game-card single-card"><h3>Scopri di più</h3><p>Entra nel mondo del gioco e scopri quanto è bello imparare! Qui trovi attività colorate, esercizi simpatici e giochi divertenti per allenare la mente.</p></div><div class="first-game-card single-card" role="button" tabindex="0"><img src="assets/img/quiz.png" alt="Illustrazione di un'ape con lettere sotto per formare il nome"><h4>Scopri il nome</h4></div><div class="second-game-card single-card" role="button" tabindex="0"><img src="assets/img/lessons.png" alt="Illustrazione di un quaderno con lettere dell'alfabeto e numeri"><h4>Ripassa con Owly</h4></div><div class="third-game-card single-card" role="button" tabindex="0"><img src="assets/img/music.png" alt="Illustrazione di uno stereo con cuffie e note musicali"><h4>Indovina il suono</h4></div><div class="fourth-game-card single-card" role="button" tabindex="0"><img src="assets/img/puzzle.png" alt="Illustrazione di unu puzzle a forma di faccia di un orsetto"><h4>Risolvi il puzzle</h4></div><div class="fifth-game-card single-card" role="button" tabindex="0"><img src="assets/img/clock.png" alt="Illustrazione di un orologio"><h4>Che ore sono?</h4></div><div class="sixth-game-card single-card" role="button" tabindex="0"><img src="assets/img/maths.png" alt="Illustrazione di un quaderno con alcune operazioni matematiche di tabelline"><h4>Impara le tabelline</h4></div></div></section><section id="value"><h2>I nostri valori</h2><div class="value-container"><div class="first-value-img"><img src="assets/img/lis.jpg" alt="Immagine di un bambino in videolezione in linguaggio LIS"></div><div class="value-text"><p>Owly include contenuti accessibili con lingua dei segni (LIS),<br>pensati per i bambini con disabilità uditive.<br>Perché imparare deve essere un diritto di tutti!</p><button type="button" class="btn btn--lightblue" aria-label="Accedi ai contenuti in LIS">Accedi</button></div></div></section><section id="message"><h2>Resta sempre in contatto con la tua scuola</h2><div class="message-container"><p>Con Owly, genitori e insegnanti restano sempre aggiornati! Ricevi avvisi, messaggi e circolari scolastiche direttamente dalla scuola.</p><button type="button" class="btn btn--pink btn-message" aria-label="Accedi alle comunicazioni della tua scuola">Accedi</button><div class="image-mobile-container"><img src="assets/img/img-message.png" alt="Illustrazione di uno smartphone che riceve un messaggio di avviso dalla scuola"></div></div></section></main><footer aria-label="Informazioni di chiusura"><div class="footer"><div class="footer-image-item"><img src="assets/img/logo-removebg.png" class="image-footer" alt="Immagine logo Owly raffigurante un libro aperto e le lettere che formano OWLY in colori diversi"></div><div class="footer-place-item"><h2 class="sr-only">Informazioni utili</h2><dl><dt>Info</dt><dd role="button" tabindex="0">Chi siamo</dd><dd role="button" tabindex="0">Cerca un libro</dd><dd role="button" tabindex="0">Contenuti LIS</dd></dl></div><div class="footer-contact-item"><h2 class="sr-only">Contatti e social</h2><dl><dt>Seguici sui social</dt><dd><a href="https://instagram.com"><i class="bi bi-instagram" aria-hidden="true"></i> <span>Instagram</span></a></dd><dd><a href="https://facebook.com"><i class="bi bi-facebook" aria-hidden="true"></i> <span>Facebook</span></a></dd><dd><a href="https://youtube.com"><i class="bi bi-youtube" aria-hidden="true"></i> <span>Youtube</span></a></dd></dl></div></div></footer></body></html>
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Owly: piattaforma educativa interattiva per bambini, genitori e insegnanti. Scopri libri, quiz, giochi e comunicazioni scolastiche.">
+    <meta name="keywords"
+        content="Owly, scuola, apprendimento, libri, esercizi, video, quiz, bambini, insegnanti, genitori">
+    <meta name="author" content="Chiara">
+    <meta property="og:title" content="Owly">
+    <meta property="og:description"
+        content="Owly ti aiuta a rendere lo studio più semplice e divertente con libri, giochi ed esercizi interattivi.">
+    <meta property="og:image" content="https://junior5969.github.io/javascript-advanced/assets/img/logo.png">
+    <meta property="og:url" content="https://junior5969.github.io/javascript-advanced">
+    <meta property="og:type" content="website">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>Owly</title>
+    <script defer="defer" src="main.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar"><img src="assets/img/logo-removebg.png"
+            alt="Immagine logo Owly raffigurante un libro aperto e le lettere che formano OWLY in colori diversi">
+        <button class="menu-toggle" aria-label="Apri il menu">&#9776;</button>
+        <nav class="nav-list hidden"><button class="menu-close hidden" aria-label="Chiudi il menu">&#x58;</button> <a
+                href="#about-us">Chi siamo</a> <a href="#game">Studiare</a> <a href="#message">Comunicazioni</a></nav>
+    </header>
+    <main>
+        <div id="intro">
+            <div class="intro-container">
+                <div class="intro-img"><img src="assets/img/ragazzi-a-scuola.png"
+                        alt="Immagine raffigurante tre bambini a scuola con zaino e quaderni colorati"></div>
+                <div class="intro-elements">
+                    <h1 id="intro-title">Imparare non è stato mai così divertente!</h1><button type="button"
+                        class="btn first-button" aria-labelledby="intro-title">Accedi</button>
+                </div>
+            </div>
+        </div>
+        <div id="card">
+            <div class="card-container">
+                <div class="card-list">
+                    <div><i class="bi bi-book"></i>
+                        <p>Approfondisci le tue conoscenze cercando il libro che fa al caso tuo</p>
+                    </div>
+                    <div><i class="bi bi-joystick"></i>
+                        <p>Allenati con quiz interattivi per consolidare lo studio</p>
+                    </div>
+                    <div><i class="bi bi-pencil"></i>
+                        <p>Consulta appunti e testi relativi alle lezioni seguite in classe</p>
+                    </div>
+                    <div><i class="bi bi-envelope"></i>
+                        <p>Ricevi comunicazioni dalla tua scuola per rimanere sempre aggiornato</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="about-us">
+            <h2>Insieme per crescere, insieme per capire</h2>
+            <div class="about-description">
+                <div class="about-img-container"><img src="assets/img/about-img.jpg"
+                        alt="Immagine raffigurante una classe di bambini che alzano la mano"></div>
+                <div class="about-description-text">
+                    <p>Chi è <span>Owly</span>? Un gruppo di insegnanti con un obiettivo comune:<br>rendere lo studio
+                        più semplice, accessibile e stimolante per tutti.<br>Così abbiamo creato uno spazio colorato ed
+                        intuitivo,<br>per accompagnare in un percorso quotidiano:</p>
+                    <ul class="about-us-list">
+                        <li>bambini</li>
+                        <li>genitori</li>
+                        <li>insegnanti</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="search">
+            <h2>Scegli la categoria di libro che vuoi leggere!</h2>
+            <div class="search-container">
+                <div class="search-elements"><label for="category" class="sr-only">Inserisci la categoria di libri da
+                        cercare</label> <input class="textbox" id="category" placeholder="Categoria" required> <button
+                        type="button" class="btn btn--lightblue search-button"
+                        aria-label="Cerca una categoria di libro che vuoi leggere">Cerca</button></div>
+            </div>
+        </section>
+        <div id="show-books"></div>
+        <section id="game">
+            <h2>Divertiti e impara</h2>
+            <div class="game-card">
+                <div class="text-game-card single-card">
+                    <h3>Scopri di più</h3>
+                    <p>Entra nel mondo del gioco e scopri quanto è bello imparare! Qui trovi attività colorate, esercizi
+                        simpatici e giochi divertenti per allenare la mente.</p>
+                </div>
+                <div class="first-game-card single-card" role="button" tabindex="0"><img src="assets/img/quiz.png"
+                        alt="Illustrazione di un'ape con lettere sotto per formare il nome">
+                    <h4>Scopri il nome</h4>
+                </div>
+                <div class="second-game-card single-card" role="button" tabindex="0"><img src="assets/img/lessons.png"
+                        alt="Illustrazione di un quaderno con lettere dell'alfabeto e numeri">
+                    <h4>Ripassa con Owly</h4>
+                </div>
+                <div class="third-game-card single-card" role="button" tabindex="0"><img src="assets/img/music.png"
+                        alt="Illustrazione di uno stereo con cuffie e note musicali">
+                    <h4>Indovina il suono</h4>
+                </div>
+                <div class="fourth-game-card single-card" role="button" tabindex="0"><img src="assets/img/puzzle.png"
+                        alt="Illustrazione di unu puzzle a forma di faccia di un orsetto">
+                    <h4>Risolvi il puzzle</h4>
+                </div>
+                <div class="fifth-game-card single-card" role="button" tabindex="0"><img src="assets/img/clock.png"
+                        alt="Illustrazione di un orologio">
+                    <h4>Che ore sono?</h4>
+                </div>
+                <div class="sixth-game-card single-card" role="button" tabindex="0"><img src="assets/img/maths.png"
+                        alt="Illustrazione di un quaderno con alcune operazioni matematiche di tabelline">
+                    <h4>Impara le tabelline</h4>
+                </div>
+            </div>
+        </section>
+        <section id="value">
+            <h2>I nostri valori</h2>
+            <div class="value-container">
+                <div class="first-value-img"><img src="assets/img/lis.jpg"
+                        alt="Immagine di un bambino in videolezione in linguaggio LIS"></div>
+                <div class="value-text">
+                    <p>Owly include contenuti accessibili con lingua dei segni (LIS),<br>pensati per i bambini con
+                        disabilità uditive.<br>Perché imparare deve essere un diritto di tutti!</p><button type="button"
+                        class="btn btn--lightblue" aria-label="Accedi ai contenuti in LIS">Accedi</button>
+                </div>
+            </div>
+        </section>
+        <section id="message">
+            <h2>Resta sempre in contatto con la tua scuola</h2>
+            <div class="message-container">
+                <p>Con Owly, genitori e insegnanti restano sempre aggiornati! Ricevi avvisi, messaggi e circolari
+                    scolastiche direttamente dalla scuola.</p><button type="button" class="btn btn--pink btn-message"
+                    aria-label="Accedi alle comunicazioni della tua scuola">Accedi</button>
+                <div class="image-mobile-container"><img src="assets/img/img-message.png"
+                        alt="Illustrazione di uno smartphone che riceve un messaggio di avviso dalla scuola"></div>
+            </div>
+        </section>
+    </main>
+    <footer aria-label="Informazioni di chiusura">
+        <div class="footer">
+            <div class="footer-image-item"><img src="assets/img/logo-removebg.png" class="image-footer"
+                    alt="Immagine logo Owly raffigurante un libro aperto e le lettere che formano OWLY in colori diversi">
+            </div>
+            <div class="footer-place-item">
+                <h2 class="sr-only">Informazioni utili</h2>
+                <dl>
+                    <dt>Info</dt>
+                    <dd role="button" tabindex="0">Chi siamo</dd>
+                    <dd role="button" tabindex="0">Cerca un libro</dd>
+                    <dd role="button" tabindex="0">Contenuti LIS</dd>
+                </dl>
+            </div>
+            <div class="footer-contact-item">
+                <h2 class="sr-only">Contatti e social</h2>
+                <dl>
+                    <dt>Seguici sui social</dt>
+                    <dd><a href="https://instagram.com"><i class="bi bi-instagram" aria-hidden="true"></i>
+                            <span>Instagram</span></a></dd>
+                    <dd><a href="https://facebook.com"><i class="bi bi-facebook" aria-hidden="true"></i>
+                            <span>Facebook</span></a></dd>
+                    <dd><a href="https://youtube.com"><i class="bi bi-youtube" aria-hidden="true"></i>
+                            <span>Youtube</span></a></dd>
+                </dl>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
