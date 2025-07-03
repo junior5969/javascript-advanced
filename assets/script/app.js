@@ -1,8 +1,4 @@
-
-import axios from 'axios';
-import _ from 'lodash';
-import '../css/style.css';  // Assicurati che il percorso sia corretto
-
+import "../css/style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const sectionBooks = document.querySelector("#show-books");
@@ -34,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Inserisci una categoria prima di cercare.");
       return;
     }
+
+    const { default: axios } = await import("axios");
+    const { default: _ } = await import("lodash");
 
     const url = `https://openlibrary.org/subjects/${category}.json`;
 
@@ -114,7 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
             descriptionDiv.style.display = "block";
           } catch (error) {
             console.error("Errore nel recupero della descrizione:", error);
-            descriptionElement.textContent = "Errore durante il recupero della descrizione.";
+            descriptionElement.textContent =
+              "Errore durante il recupero della descrizione.";
             descriptionDiv.style.display = "block";
           }
         });

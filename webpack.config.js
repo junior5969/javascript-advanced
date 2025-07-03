@@ -13,6 +13,20 @@ module.exports = {
     filename: '[name].js',
     publicPath: isGitHubPages ? '/javascript-advanced/' : '', 
   },
+  optimization: {
+    minimize: true, // Abilita la minimizzazione del codice
+    minimizer: [new TerserPlugin()],
+    splitChunks: {
+      chunks: 'all', // 'all' significa che vengono splittati anche i moduli di terze parti
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/, // I moduli in node_modules verranno separati
+          name: 'vendors',
+          chunks: 'all', // Questo separa tutto il codice di librerie come React, Lodash, ecc.
+        },
+      },
+    },
+  },
   module: {
     rules: [
       {
@@ -31,10 +45,6 @@ module.exports = {
         },
       },
     ],
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
   },
   plugins: [
     new CleanWebpackPlugin(), 
