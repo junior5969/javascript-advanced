@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // Cartella di destinazione
     filename: '[name].js',
     // Cambia publicPath dinamicamente
-    publicPath: isGitHubPages ? '/javascript-advanced/' : '/', // Se su GitHub Pages, aggiungi il nome del repo
+    publicPath: isGitHubPages ? '/javascript-advanced/' : '', // Se su GitHub Pages, aggiungi il nome del repo
   },
   module: {
     rules: [
